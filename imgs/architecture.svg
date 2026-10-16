@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="460" viewBox="0 0 880 460" font-family="'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="880" height="460" fill="#ffffff"/>
+
+  <!-- Simulation core -->
+  <rect x="20" y="20" width="560" height="420" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="40" y="50" font-size="17" font-weight="700" fill="#0f172a">Simulation Core</text>
+  <text x="190" y="50" font-size="13" fill="#64748b">headless · no graphics dependency</text>
+
+  <!-- World -->
+  <rect x="40" y="70" width="520" height="120" rx="10" fill="#e6f4f1" stroke="#0f766e" stroke-width="2"/>
+  <text x="300" y="104" font-size="18" font-weight="700" fill="#0f766e" text-anchor="middle">World</text>
+  <text x="300" y="134" font-size="14" fill="#134e4a" text-anchor="middle">3D space · fixed timestep (ticks) · seeded RNG</text>
+  <text x="300" y="158" font-size="14" fill="#134e4a" text-anchor="middle">procedural generation (terrain · biomes)</text>
+  <text x="300" y="180" font-size="12" fill="#64748b" text-anchor="middle">3D representation: undecided</text>
+
+  <!-- Agents -->
+  <rect x="50" y="290" width="200" height="120" rx="10" fill="#fff4e6" stroke="#c2410c" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="150" y="324" font-size="17" font-weight="700" fill="#c2410c" text-anchor="middle">Agent</text>
+  <text x="150" y="352" font-size="13" fill="#7c2d12" text-anchor="middle">digimon · resources</text>
+  <text x="150" y="372" font-size="13" fill="#7c2d12" text-anchor="middle">terrain features · items</text>
+  <text x="150" y="396" font-size="12" fill="#64748b" text-anchor="middle">implementation: undecided</text>
+
+  <rect x="350" y="290" width="200" height="120" rx="10" fill="#fff4e6" stroke="#c2410c" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="450" y="324" font-size="17" font-weight="700" fill="#c2410c" text-anchor="middle">Agent</text>
+  <text x="450" y="352" font-size="13" fill="#7c2d12" text-anchor="middle">every object in</text>
+  <text x="450" y="372" font-size="13" fill="#7c2d12" text-anchor="middle">the world is an agent</text>
+  <text x="450" y="396" font-size="12" fill="#64748b" text-anchor="middle">implementation: undecided</text>
+
+  <!-- Agent <-> Environment -->
+  <line x1="150" y1="194" x2="150" y2="286" stroke="#475569" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <line x1="450" y1="194" x2="450" y2="286" stroke="#475569" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <rect x="225" y="226" width="150" height="28" rx="14" fill="#ffffff" stroke="#0f766e"/>
+  <text x="300" y="245" font-size="13" font-weight="700" fill="#0f766e" text-anchor="middle">Agent ↔ Env</text>
+
+  <!-- Agent <-> Agent -->
+  <line x1="254" y1="350" x2="346" y2="350" stroke="#475569" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="300" y="340" font-size="12" font-weight="700" fill="#c2410c" text-anchor="middle">Agent ↔</text>
+  <text x="300" y="370" font-size="12" font-weight="700" fill="#c2410c" text-anchor="middle">Agent</text>
+
+  <!-- Viewer -->
+  <rect x="640" y="70" width="220" height="120" rx="10" fill="#eef2f7" stroke="#475569" stroke-width="2"/>
+  <text x="750" y="110" font-size="17" font-weight="700" fill="#1e293b" text-anchor="middle">Viewer</text>
+  <text x="750" y="138" font-size="14" fill="#334155" text-anchor="middle">SDL3 / OpenGL 3D</text>
+  <text x="750" y="162" font-size="12" fill="#64748b" text-anchor="middle">reads world state only</text>
+  <line x1="564" y1="130" x2="636" y2="130" stroke="#475569" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <text x="608" y="120" font-size="12" fill="#475569" text-anchor="middle">read-only</text>
+
+  <!-- User -->
+  <rect x="640" y="290" width="220" height="120" rx="10" fill="#f3efff" stroke="#6d28d9" stroke-width="2"/>
+  <text x="750" y="330" font-size="17" font-weight="700" fill="#6d28d9" text-anchor="middle">User (Tamer)</text>
+  <text x="750" y="358" font-size="13" fill="#4c1d95" text-anchor="middle">intervention · interface</text>
+  <text x="750" y="380" font-size="13" fill="#4c1d95" text-anchor="middle">bond</text>
+  <line x1="554" y1="350" x2="636" y2="350" stroke="#475569" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="608" y="340" font-size="12" font-weight="700" fill="#6d28d9" text-anchor="middle">Agent ↔</text>
+  <text x="608" y="370" font-size="12" font-weight="700" fill="#6d28d9" text-anchor="middle">User</text>
+</svg>
